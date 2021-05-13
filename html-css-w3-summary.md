@@ -1,19 +1,14 @@
 # HTML
 
-
 ## VSCodium
-
 ```
 comment toggle: ctrl /
-
 ```
-
 
 
 ## Elements
-
 ```
-elements: inline and block
+elements: <start tag>text<end tag>: inline and block
 inline: float content on left and right
 block:  fill entire line; can display nothing on left or right
 can change via: display: float;
@@ -39,12 +34,9 @@ bigger hamburger:  &#9776
 
 
 ## Tricks
-
 ```
 200px on left element: right element would have margin-left: 200px;
 ```
-
-
 
 
 ## Text formatting
@@ -101,9 +93,7 @@ border color: <h1 style="border: 2px solid Tomato;">
 ```
 
 
-
 ## Links
-
 ```
 hyperlink: <a href = "url">text</a>
 <p>
@@ -148,9 +138,7 @@ create bookmark: use id attribute:
 ```
 
 
-
 ## Images
-
 ```
 linked to web pages; not inserted
 empty element
@@ -181,8 +169,6 @@ define image map: <map>
 clickable area: <area>
 container: <picture>
 ```
-
-
 
 
 ## CSS
@@ -216,14 +202,13 @@ p {
 ```
 
 
-
-
-## Home
+## w3
 
 ```
-w3.css
-w3.js
+2 files: w3.css w3.js: all are classes
 
+w3-container
+w3-panel
 w3-main
 w3-button
 w3-collapse
@@ -231,8 +216,43 @@ w3-bar-block: vertical; without: horizontal
 ```
 
 
-## Navigation bars
+## w3-container
+```
+16px l/r padding
+for all html container elements:
+<div> <article> <section>
+<header> <footer> <form>
+can use <div> for <header>, <footer>, <article>, <section>
+<h1>, <p>: provide margins to simulate padding
+```
 
+
+## w3-panel
+```
+16px /r/t/b margins
+no margins: text
+got margins: <h1>text</h1> or <p>text</p>
+panel: good for notes, quotes, alerts and cards (shadow) with pale colour
+e.g. w3-palegreen
+
+typical:
+<h2>text</h2>
+<p>text</p>
+<div>
+  <p>text</p>
+</div>
+
+w3-panel
+w3-leftbar
+w3-sand
+w3-xxlarge
+w3-serif
+w3-card-4
+w3-round-xlarge
+```
+
+
+## Navigation bars
 ```
 classes: 7
 basic: w3-bar w3-bar-item
@@ -258,7 +278,6 @@ side navbar: w3-sidebar
 
 
 ## Sidebar or vertical navbar
-
 ```
 Always display: 2 <div>s w3-sidebar w3-bar-block width:25% margin-left: 25%
 open navbar over part content: w3_open() w3_close() style.display block or none
@@ -282,7 +301,6 @@ sidenav content: <div>s with w3-sidebar w3-container <img> <a>s
 
 
 ## Slideshow
-
 ```
 manual: <img>s with same class name; 2 buttons w3-display-left w3-display-right; onclick
 automatic: carousel()
