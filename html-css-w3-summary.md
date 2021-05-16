@@ -50,6 +50,8 @@ strike out: <del>text</del>
 insert (underline): <ins>text</ins>
 subscript: <sub>text</sub>
 superscript: <sup>text<sup>
+
+
 ```
 
 
@@ -138,6 +140,13 @@ create bookmark: use id attribute:
 ```
 
 
+## Fonts
+```
+
+```
+
+
+
 ## Images
 ```
 linked to web pages; not inserted
@@ -205,7 +214,12 @@ p {
 ## w3
 
 ```
-2 files: w3.css w3.js: all are classes
+2 files: w3.css w3.js (no?): all are classes
+use mostly w3-classes and not raw css classes
+everything in w3.css are classes
+most or not all can apply to any html elements
+hint: fill in all <tags>, then add attributes, class, id, etc
+can copy/paste code from w3 website into my own code
 
 w3-container
 w3-panel
@@ -250,6 +264,38 @@ w3-serif
 w3-card-4
 w3-round-xlarge
 ```
+
+
+
+## card
+```
+paper-like cards: w3-card
+2px bordered shadow: w3-card-2
+4px: w3-card-4
+colored card: w3-color
+card content: add containers inside the card
+width: 50% margin-left: 50%; margin-right: 25%;
+photo card:
+  <div class="w3-card-4">
+    <img>
+    <div> <p>text</p> </div>
+  </div>
+```
+
+
+
+## Default
+```
+font size: 15px
+font: Verdana
+line spacing: 1.5
+override default:
+1. in <head> section: <style> html, body, h1,h2,h3,h4,h5,h6 {font-family: Cursive, sans-serif;}</style>
+2. add own.css after w3.css
+3. change w3.css: h1 {font-size: 64px;}
+note: comma separated in h1,h2...
+```
+
 
 
 ## Navigation bars
@@ -312,3 +358,148 @@ Multiple slideshow on same page: multiple classes
 Animated slides: w3-animate-* top bottom
 Faded animation: w3-animate-fading
 ```
+
+
+
+## Button classes
+```
+add button behaviour to any html elements:
+w3-button
+with shadow: w3-btn
+w3-bar
+full width buttons: w3-block
+circular button: w3-circle
+ripple effect: w3-ripple
+button colour: w3-color classes
+hover color: w3-hover-color classes
+color: pale-green, light-blue, Deep orange
+button shape: w3-round-size classes
+  <style>
+  .w3-btn { wdth: 150px;}
+  </style>
+button size: w3-size classes
+w3-tiny/ small/ medium/ large/ xlarge/ xxlarge/ xxxlarge/ jumbo
+button border: w3-border, w3-border-color
+full width botton: w3-block
+disabled button: w3-disabled
+w3-bar
+  w3-button
+  w3-button
+w3-bar-item: without space between them
+2 or more button bars on same line:
+add w3-show-inline-block
+left and right buttons: w3-left, w3-right
+button with ripple effect: w3-ripple
+any div, header, footer or container can be a button: ws-button, w3-btn
+connect button: <button class="w3-button w3-block w3-dark-grey"> + Connect </button>
+```
+
+
+## Display classes
+```
+display inside other html elements:
+w3-display-container
+w3-display-topleft/ topmiddle/ topright
+w3-display-left/middle/right
+w3-display-bottomleft/ middle/ right
+w3-display-position
+w3-display-hover
+float: w3-left, w3-right
+block/none: w3-show, w3-hide, w3-hide-small
+responsive: w3-mobile
+display text inside an image:
+  w3-display-container
+  <img class="w3-display-tpleft">
+display hover: w3-display-hover
+create cool effects: combine with effect classes, animation classes
+w3-hover-opacity, w3-display-hover
+  <div class="w3-bar">
+    <div class="w3-left">
+    <div class="w3-right">
+  </div>
+clear floats: w3-clear
+
+w3-display-container
+w3-display-bottomleft
+w3-padding
+w3-row
+w3-third
+```
+
+
+## Fonts
+```
+default: verdana
+headings: Segoe UI
+Use another font as default:
+body,h1,h2,h3,h4,h5,h6 {font-family: Arial, Helvetica, sans-serif;}
+4 built-in font classes: w3-serif, w3-sans-serif, w3-monosapce, w3-cursive
+web safe sans serif fonts: arial,helvetica,verdana,geneva,tahoma,trebuchet hs
+safe fallback
+font-family: Arial, Helvetica, sans-serif;
+"Segoe UI", Arial, sans-serif
+monospace fonts: for code
+font size: w3-size-tiny/ small/ medium/ large/ xlarge/ xxlarge/ xxxlarge/ jumbo
+```
+
+
+## Google fonts
+```
+1000 to choose
+external font library:
+Roboto, Sofia, Tangerine, Lobster, shadow-multiple
+
+<link href="https://fonts.googleapis.com/css?family=Roboto">
+body, h1,h2,h3,h4,h5,h6 {font-family: Roboto, sans-serif;}
+
+create a font class:
+.w3-sofia {font-family: Sofia, Cursive;}
+<p class="w3-soofia">text</p>
+```
+
+
+## Text
+```
+alignment: w3-left-align, w3-right-align, w3-center, w3-wide
+<img style="width:80%; max-width:320px; w3-wide">
+text opacity: w3-opacity
+text shadow: style="text-shadow: 1px 1px 0 #444": x y
+special effect: w3-text-orange/ yellow
+w3-round-size: w3-round, w3-round-small/ large/ xlarge/ xxlarge
+display content inside a circle: w3-circle; easy
+  <img class="w3-cicle">
+w3-padding-32 w3-red w3-circle w3-center
+circle inside a circle
+w3-padding-number: 16, 24, 32, 48, 64 top and bottom
+w3-padding-size: w3-padding, w3-padding-small/large
+kevq: use margins or paddings?
+w3-margin: add 16px margin to all sides of an element
+clockwise: w3-margin-top/ right/ bottom/ left
+top and bottom only: w3-section
+```
+
+
+
+## Border
+```
+w3-border, w3-border-0
+w3-border-top/ right/ bottom/ left
+w3-border-color: w3-pale-blue
+w3-hover-border-color: red/ green
+thick border: w3-bottombar/ -leftbar, rightbar,topbar
+w3-round-size: w3-round, w3-round-small/ large/ xlarge/ xxlarge
+w3-text-yellow
+```
+
+
+
+## Special codes
+```
+must have ";"
+left angle quote: <p>&laquo; Previous</p>
+right angle quote: <p>&raquo; Next</p>
+copyright: &copy;
+arrows: &larr; &rarr; &uarr; &darr;
+weather widget: 32&deg; C
+```
+
