@@ -222,7 +222,6 @@ color: DodgerBlue;
 ```
 
 
-
 ## Background
 ```
 background effects for elements:
