@@ -184,11 +184,75 @@ container: <picture>
 ```
 styles and colours
 cascading style sheet: parent to child elements
-3 ways:
+3 ways to insert css: external, internal, inline
+multiple style sheets: last read used
+cascading order
 inline: style attribute: <h1 style="color:blue;">
 internal: <style> element: <style>body {color:red;} p {color:blue;}</style>
 external: <link>: <link rel="stylesheet" href="styles.css">
+
+selectors: 5
+1. simple: name, id, class
+2. combinator
+3. pseudo-class: state
+4. pseudo-element: part of an element
+5. attributes: h1.center { .. } p.center { .. }
+p.center: <p> element with class="center"
+refer to 2 classes: <p class="center large">
+
+select all html elements: * { color: blue;}
+grouping selectors: use ",": h1,h2,h3 { color: red;}
+margin-left: 20px; 
+  20 and px: no space
+color: maroon linen lavender
+
+comments: 
+  html: <!-- ... -->
+  css: /* ... */
+
+color names: 140
+1. background color
+2. text color
+3. border color
+background-color: Tomato;
+color: DodgerBlue;
+"border: 2px solid violet;"
+3-digit hex code: #rgb
+  #fc9 is same as #ffcc99
 ```
+
+
+
+## Background
+```
+background effects for elements:
+1. background-color
+2. background-image: repeat horizontally and vertically
+3. background-repeat: repeat-x, repeat-y, no-repeat
+4. background-attachment: fixed, scroll (default)
+5. background-position
+6. opacity or transparency: 0 to 1
+7. background: shorthand for all
+8. other: background-clip background-origin background-size
+
+body, p {
+  background-image: url("paper.gif");
+  opacity: 0.3;
+  background-repeat: repeat-x;
+  background-position: right top;
+  margin-right: 300px;
+}
+
+"background: #ffffff url("img-tree.png") no-repeat right top fixed;"
+```
+
+
+
+## Borders
+```
+next
+```
+
 
 
 ## CSS color
