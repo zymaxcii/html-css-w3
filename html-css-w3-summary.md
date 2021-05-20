@@ -3,6 +3,74 @@
 ## VSCodium
 ```
 comment toggle: ctrl /
+wrap with text:
+  select text: F1: wrap with abbr
+my way: select text: delete: then p<tab> ctrl v
+lorem <enter>: 30 words
+lorem10: 10 words
+ul.my-list>lorem10.item-$*5
+ul>li{lorem10}*5
+```
+
+
+## Emmet for html
+```
+! <tab/enter>
+<tagName> <tab/enter>
+basic tags:
+h1,p,bq,hdr,ftr,btn,sect
+classes: .
+div.wrapper: <div class="wrapper"></div> default to div
+.wrapper
+h1.header.center: <h1 class="header center"></h1>
+ids: # same way
+div#hero: <div id="hero"></div>
+combine:
+div#hero.wrapper: <div id="hero" class="wrapper"></div>
+content: { }
+p{text}: <p>text</p>
+siblings: +
+children: >
+section+section:
+ul>li*5
+climbing up: ^
+div+div>p>span+em^bq
+possible: 1 line for entire html's divs? try
+grouping: ( ) better than ^
+div>(header>ul>li>a)+footer>p
+multiplication: *
+number items in sequence: $, $$$
+ul>li*5
+ul>li{Item$}*3
+padding with 0s: ul>li.item$$$*5
+start with a specific no: ul>li.item$@3*5
+reverse direction: ul>li.item$@-*5
+with a specific no: ul>li.item$@-3*5
+implicit tagnames: 
+.wrapper: <div>
+em>.emphasis: <span>
+ul>.item: li
+table>.row>.col
+  <table>
+    <tr class="row">
+      <td class="col">text</td>
+    <tr>
+  </table>
+```
+
+
+## Imitate a website
+```
+copy all text from original website
+vscode: paste: then add tags or
+
+set up all the <div>s with emmet (1-liner?)
+then copy and paste from original website
+```
+
+
+## Emmet for css
+```
 
 ```
 
