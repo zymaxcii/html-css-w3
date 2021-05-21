@@ -1,0 +1,3 @@
+(function($){'use strict';function element_ready_hook(){elementorFrontend.hooks.addAction('frontend/element_ready/global',function(element){$(element).find('.jeg_module_hook').jmodule();epic.hero.init(element);$(element).find(".jeg_news_ticker").epicticker();$(element).epic_carousel();$(element).find(".jeg_blocklink .jeg_videobg").jvideo_background();$(element).epic_slider();$(element).find(".jeg_video_playlist").addClass('jeg_col_4').jvidplaylist();});}
+function do_ready(){element_ready_hook();}
+$(document).ready(do_ready);})(jQuery);
