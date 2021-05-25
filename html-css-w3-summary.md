@@ -249,7 +249,56 @@ container: <picture>
 ```
 
 
-## CSS
+## CSS Box Model
+```
+everything displayed by css is a box
+it is all boxes
+box model: content, padding, border, margin boxes
+outline and shadow boxes
+outline:
+box-shadow:
+ouline-width: 200px;
+debugging box model: with firefox
+
+display:
+<div>: block
+<li> : list-item
+<span> : inline
+inline-block: respect block margin
+box-sizing: content-box or border-box;
+
+
+pseudo-classes and pseudo-elements:
+*, *::before, *::after { box-sizing: border-box;}
+before, after: pseudo-elements
+
+<article>
+  <p></p>
+  <p></p>
+</article>
+
+article p:first-of-type { color:red; font-size: 1.5em;}
+
+functions
+filters
+p {width, height, padding, border}
+border-radius: circle;
+intrinsic vs extrinsic sizing
+use overflow property
+overflow: width: max-content;
+overflow: auto | scroll
+
+<figure>
+  <label>
+  <input>
+  <img>
+  <figcaption>text</figcaption>
+</figure>
+```
+
+
+
+## More CSS
 ```
 styles and colours
 cascading style sheet: parent to child elements
@@ -261,13 +310,29 @@ internal: <style> element: <style>body {color:red;} p {color:blue;}</style>
 external: <link>: <link rel="stylesheet" href="styles.css">
 
 selectors: 5
-1. simple: name, id, class
+1. simple: name, id, class, <html>
 2. combinator
 3. pseudo-class: state
 4. pseudo-element: part of an element
 5. attributes: h1.center { .. } p.center { .. }
 p.center: <p> element with class="center"
 refer to 2 classes: <p class="center large">
+
+universal (wildcard):
+* { color: hotpink;}
+type, class, id, attributes: [ ... ]
+[data-tpye='primary'] { color: red;}
+<div data-type="primary"></div>
+[data-type] { color: red;}
+
+regardless of value:
+[data-type='primary' s] { color: red;}
+s: small
+i: case insensitive
+
+grouping: use ,
+strong, em, .myelement, [lang] { color: red;}
+
 
 select all html elements: * { color: blue;}
 grouping selectors: use ",": h1,h2,h3 { color: red;}
@@ -341,6 +406,30 @@ p {
     padding: 30px;
 }
 ```
+
+
+## Media queries
+```
+media queries: @media
+apply different styles for different media types/devices
+check: width, height, orientation, resolution of viewport/device
+media type: print, screen, speech, all
+responsive
+@media not|only media-type and (mediafeature and|or|not mediafeature)
+  { CSS-code;}
+different stylesheets for different medias:
+<link media="screen" and (min-width:900px;)" ...>
+or max-width: 600px;
+
+<nav></nav>
+<menu></menu>
+
+favicon: favourite icon, shortcut or url icon
+appear in tab:
+<link rel="shortcut icon" type="image/png" href="img/favicon.png">
+
+```
+
 
 
 ## w3
@@ -633,5 +722,54 @@ right angle quote: <p>&raquo; Next</p>
 copyright: &copy;
 arrows: &larr; &rarr; &uarr; &darr;
 weather widget: 32&deg; C
+```
+
+
+## Responsive
+```
+w3-row, w3-row-padding
+w3-auto, w3-stretch
+w3-half, w3-thitd, w3-quarter
+w3-twothird, w3-threequarter
+w3-col, w3-row
+```
+
+## Combinators
+```
+sit between 2 selectors
+descendent, child, adjacent siblings, general siblings:
+<space>, >, +, ~
+elements: parent, child
+1. descendent: <space>
+  p strong { color: blue;}
+2. next sibling: +
+3. subsequent sibling: ~
+4. child or direct children: >
+```
+
+
+## Pseudo-class and pseudo-elements
+```
+pseudo-class: :
+a:link, :root, :hover
+a:hover { outline: 1px dotted green;}
+p:nth-child(even) { background: floralwhite;}
+
+pseudo-element: ::
+as if insert a new element with css
+insert content in an element: ::before, ::after
+.my-element::before { content: 'Prefix-';}
+
+::marker
+li:: marker { color: red;}
+::selection { background: black; color: white;}
+
+complex selectors: fine-grained control
+```
+
+
+## CSS Variables
+```
+var()
 ```
 
