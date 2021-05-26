@@ -1,0 +1,9 @@
+Create a Web Site
+use the same frameworks and barebones in all your projects
+
+Every Web developer should have an HTML skeleton.
+It should be kept in his pocket, and used for every job
+
+Make it a habit to "pack" HTML sections in div elements.
+Prepare yourself for giving each section a class name
+
