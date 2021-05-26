@@ -1,3 +1,94 @@
+# GIT
+```
+git
+git config files:
+[path]/etc/gitconfig: --system
+  ~/.gitconfig or ~/.config/git/config: --global
+  /git/config
+  .git/config: --local 
+ 
+  git config --list --show-origin
+ 
+when you install Git,set your user name and email address:
+git config --global user.name "zymaxcii"
+git config --global user.email zyma.xcii@gmail.com
+git config --global core.editor vi
+
+To set main as the default branch name do:
+git config --global init.defaultBranch main
+your configuration settings:
+git config --list
+git config <key>:
+git config user.name
+John Doe
+
+git push: cannot paste password or personal access token
+use vscodium: push to fix this problem
+
+push existing repo:
+git add * or . (current directory)
+git commit -m "commit message"
+
+git remote add origin https://github.com/zymaxcii/sth.git
+all: git push -u origin master
+git remote
+git remote -v
+
+vscodium:
+settings: enable git
+perform git add first
+enter commit message then click "tick" to commit
+3-dot menu: push
+F1 command palette: add remote
+```
+
+## Steps involved
+```
+1. create a new repo in github
+2. git clone: either https or ssh
+a sub-directory will be created
+set account default id:
+git config --global user,email "zyma.xcii@gmail.com"
+
+github: uses markdown.md
+good; can read my stuff here; no need to put into blogger
+ctrl f to find/search
+
+5. get latest changes: git pull
+    work on new files
+    git add *
+    git commit -m "msg"
+    push
+    repeat the above
+
+6. Revert a change
+    find hash of commit
+    git log --pretty=online
+    git revert <first 5 chars e.g. 37101>
+
+More: github actions
+```
+
+
+## Work on branches
+```
+branches: main, dev
+when happy to go live on production site
+merge changes into main
+1. git checkout -b dev
+-b: create a new branch
+git push --set-upstream origin dev
+
+2. merge branches
+flip back to main branch
+no -b: git checkout main
+merge changes: git merge dev
+push: git push
+
+```
+
+
+
 # HTML
 
 ## VSCodium
@@ -105,6 +196,36 @@ bigger hamburger:  &#9776
 ## Tricks
 ```
 200px on left element: right element would have margin-left: 200px;
+jump to top of page: <a href=”#”>Back To Top</a>
+jump to Section-1: 
+  <a href=”#Section-1″>Back To Section 1</a>
+  anchor link: <a name=”Section-1″></a>I’
+
+Download link:
+<a href="files/MPHBCAP.pdf" style="background-color: palegreen;">Download PDF</a>
+<a href="www.yourwebsite.com/files/abcd.mp3">Download MP3</a>
+<a href="www.yourwebsite.com/files/abcd.zip">Download ZIP</a>
+
+how to remove the HTML extension from a URL on a webpage:
+https://example.com/about.html
+https://example.com/about
+
+Solution 1 – Put pages in folders
+about/index.html
+
+Solution 2 – remove the HTML extension with a .htaccess redirect
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^/]+)/$ $1.html
+RewriteRule ^([^/]+)/([^/]+)/$ /$1/$2.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !(\.[a-zA-Z0-9]{1,5}|/)$
+RewriteRule (.*)$ /$1/ [R=301,L]
+
+How to have common code footer on many pages?
+
 ```
 
 
@@ -179,6 +300,26 @@ link tooltip:title= "tooltip"
 Image as link: <a> <img width:42px; height:42px> </a>
 email lin: <a href="mailto: mty@abc.com">Send mail</a>
 button link: <button onclick="document.location='default.asp'">text</button>
+
+order matters: a:link, a:visited, a:hover; a:active
+pseudo-class: define a special state of an element
+line below header: h2 {border-bottom: 20px solid #1e90ff;}
+header: <h1>text</h1><p>text</p>
+
+:root selector matches the document's root element; html element
+:root {
+  background: #ff0000;
+}
+
+CSS media types: define different style rules for different media types
+media queiries: look at the capability of the device
+
+@media not|only mediatype and (expressions) {
+  CSS-Code;
+}
+
+<link rel="stylesheet" media="mediatype and|not|only (expressions)" href="print.css">
+all, print, screen, speech
 
 link color: visited, unvisited, active, hover
 change with css:
