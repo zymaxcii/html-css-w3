@@ -1,0 +1,151 @@
+<!-- header-dufu.html -->
+
+<!DOCTYPE html>
+
+<html>
+<title>Dufu</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="shortcut icon" type="image/png" href="img/logo-dufu-w.png">
+
+<style>
+    body {
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .starting-logo {
+        box-sizing: border-box;
+        width: 55px;
+        height: 55px;
+        display: block;
+    }
+
+    .mySlides {
+        display: none
+    }
+
+    .w3-left,
+    .w3-right,
+    .w3-badge {
+        cursor: pointer
+    }
+
+    .w3-badge {
+        height: 13px;
+        width: 13px;
+        padding: 0
+    }
+</style>
+
+<body>
+
+    <div class="w3-top">
+        <div class="w3-bar w3-red">
+            <a href="#"><img class="starting-logo" src="img/logo-dufu-w.png" alt="Home"></a>
+            <a href="#" class="w3-bar-item w3-button">HOME</a>
+            <a href="#" class="w3-bar-item w3-button">COMPANY</a>
+            <a href="#" class="w3-bar-item w3-button">BUSINESS</a>
+            <a href="#" class="w3-bar-item w3-button">SUSTAINABILITY</a>
+            <a href="#" class="w3-bar-item w3-button">INVESTORS</a>
+            <a href="#" class="w3-bar-item w3-button">CAREERS</a>
+            <a href="#" class="w3-bar-item w3-button">NEWS</a>
+            <a href="#" class="w3-bar-item w3-button">CONTACT</a>
+            <a href="#" class="w3-bar-item w3-button"><i class="fa fa-search"></i></a>
+        </div>
+    </div>
+
+    <br><br>
+
+    <!-- <div class="w3-content w3-display-container" style="max-width:800px"> -->
+    <div class="w3-content w3-display-container" style="margin-top: 100px;">
+
+        <img class="mySlides" src="img/home-banner-6.jpg" style="width:100%">
+        <img class="mySlides" src="img/home-banner-6-1.jpg" style="width:100%">
+        <img class="mySlides" src="img/products-banner-5.jpg" style="width:100%">
+
+        <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle"
+            style="width:100%">
+            <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+            <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+            <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+            <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+            <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+        </div>
+    </div>
+
+    <div id="main-1">
+
+        <h1>Dufu is the definition of precision engineering.</h1>
+        <p>Since our formation, Dufu has been committed to excellence in precision engineering.</p>
+
+        <p>Dufu specializes in manufacturing precision machining parts and components. We have been supplying critical
+            products and expertise needed to manufacture complex components and equipment used in industries such as HDD
+            storage, medical, and others since 1987. Our solutions have been used for innovations around the world.</p>
+    </div>
+    <div id="main-2">
+
+        <h1>Ever think about what it takes to build servers which store your data and power your applications?</h1>
+        <p>What does it take to make a car and build planes? We have world-class facilities to build precision
+            engineered components that power technology, industries, communities, homes and people.</p>
+
+        <p>
+            Dufu has full suite of design, prototyping, production and supply chain management capabilities, making us an
+            ideal one-stop manufacturing facility for our customers. Not only do we have the experience and the expertise,
+            we have the complete range of tools, equipment and machinery, to help transfer inventions into machines or
+            products that satisfy demanding accuracy, repeatability and speed requirements.
+        </p>
+        View our products >>
+    </div>
+
+    <div id="main-3">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam cupiditate deleniti quaerat impedit ipsam
+            soluta inventore? Fuga deserunt unde voluptates dolorem impedit aut, vitae porro, a neque at ratione saepe
+            id quo fugit dolore quaerat maiores tempora vel accusamus totam non. Illo aliquid asperiores vitae earum,
+            quasi provident debitis ipsum!</p>
+    </div>
+    <div id="main-4">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo ullam qui mollitia consectetur cupiditate
+            odit aperiam! Quas pariatur earum quod a alias expedita, excepturi ratione sint natus soluta velit quo atque
+            sunt similique ipsa eos consequatur. Et ea corrupti dolorem voluptatem non reprehenderit totam. Ipsum
+            facilis dolor ullam totam laborum!</p>
+    </div>
+    <div id="main-5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem veritatis totam sunt quasi ex
+        odit, aperiam sequi voluptas velit vel! Ipsam, ad impedit in soluta debitis est aut molestias aliquam!</div>
+
+
+
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function currentDiv(n) {
+            showDivs(slideIndex = n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            if (n > x.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = x.length }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" w3-white", "");
+            }
+            x[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " w3-white";
+        }
+    </script>
+
+</body>
+
+</html>
