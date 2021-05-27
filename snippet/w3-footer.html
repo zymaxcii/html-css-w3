@@ -1,0 +1,153 @@
+<!-- Responsive 4-col -->
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Create four equal columns that floats next to each other */
+        .column {
+            float: left;
+            width: 25%;
+            padding: 20px;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* On screens that are 992px wide or less, go from four columns to two columns */
+        @media screen and (max-width: 992px) {
+            .column {
+                width: 50%;
+            }
+        }
+
+        /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+            .column {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <hr>
+    <div class="row w3-center w3-container">
+        <div class="column w3-panel" style="background-color:#aaa;">
+            <a href="#">REPORT ERROR</a>
+        </div>
+
+        <div class="column w3-panel" style="background-color:#aaa;">
+            <a href="#">FORUM</a>
+        </div>
+
+        <div class="column w3-panel" style="background-color:#aaa;">
+            <a href="#">ABOUT</a>
+        </div>
+
+        <div class="column w3-panel" style="background-color:#aaa;">
+            <a href="#">SHOP</a>
+        </div>
+
+    </div>
+
+    <hr>
+
+    <div class="row w3-center w3-container">
+        <div class="column" style="background-color:#aaa;">
+            <h2>Top Tutorials</h2>
+            <p><a href="#">HTML Tutorial</a></p>
+            <p><a href="#">CSS Tutorial</a></p>
+            <p><a href="#">JavaScript Tutorial</a></p>
+            <p><a href="#">How To Tutorial</a></p>
+            <p><a href="#">SQL Tutorial</a></p>
+            <p><a href="#">Python Tutorial</a></p>
+            <p><a href="#">W3.CSS Tutorial</a></p>
+            <p><a href="#">Bootstrap Tutorial</a></p>
+            <p><a href="#">PHP Tutorial</a></p>
+            <p><a href="#">Java Tutorial</a></p>
+            <p><a href="#">C++ Tutorial</a></p>
+            <p><a href="#">jQuery Tutorial</a></p>
+        </div>
+
+
+        <div class="column" style="background-color:#bbb;">
+            <h2>Top References</h2>
+            <p><a href="#">HTML Reference</a></p>
+            <p><a href="#">CSS Reference</a></p>
+            <p><a href="#">JavaScript Reference</a></p>
+            <p><a href="#">SQL Reference</a></p>
+            <p><a href="#">Python Reference</a></p>
+            <p><a href="#">W3.CSS Reference</a></p>
+            <p><a href="#">Bootstrap Reference</a></p>
+            <p><a href="#">PHP Reference</a></p>
+            <p><a href="#">HTML Colors</a></p>
+            <p><a href="#">Java Reference</a></p>
+            <p><a href="#">Angular Reference</a></p>
+            <p><a href="#">jQuery Reference</a></p>
+            <p><a href="#"></a></p>
+        </div>
+
+        <div class="column" style="background-color:#ccc;">
+            <h2>Top Examples</h2>
+            <p><a href="#">HTML Examples</a></p>
+            <p><a href="#">CSS Examples</a></p>
+            <p><a href="#">JavaScript Examples</a></p>
+            <p><a href="#">How To Examples</a></p>
+            <p><a href="#">SQL Examples</a></p>
+            <p><a href="#">Python Examples</a></p>
+            <p><a href="#">W3.CSS Examples</a></p>
+            <p><a href="#">Bootstrap Examples</a></p>
+            <p><a href="#">PHP Examples</a></p>
+            <p><a href="#">Java Examples</a></p>
+            <p><a href="#">XML Examples</a></p>
+            <p><a href="#">jQuery Examples</a></p>
+        </div>
+
+        <div class="column" style="background-color:#ddd;">
+            <h2>Web Courses</h2>
+            <p><a href="#">HTML Course</a></p>
+            <p><a href="#">CSS Course</a></p>
+            <p><a href="#">JavaScript Course</a></p>
+            <p><a href="#">Front End Course</a></p>
+            <p><a href="#">SQL Course</a></p>
+            <p><a href="#">Python Course</a></p>
+            <p><a href="#">PHP Course</a></p>
+            <p><a href="#">jQuery Course</a></p>
+            <p><a href="#">Java Course</a></p>
+            <p><a href="#">C++ Course</a></p>
+            <p><a href="#">C# Course</a></p>
+            <p><a href="#">XML Course</a></p>
+        </div>
+        <hr>
+    </div>
+    <hr>
+    
+    <div class="w3-panel w3-center">
+        <p>W3Schools is optimized for learning and training. Examples might be simplified to improve reading and learning.
+            Tutorials, references, and examples are constantly reviewed to avoid errors, but we cannot warrant full
+            correctness of all content. While using W3Schools, you agree to have read and accepted our terms of use, cookie
+            and privacy policy.</p>
+        <p>Copyright 1999-2021 by Refsnes Data. All Rights Reserved.</p>
+        <p>W3Schools is Powered by W3.CSS.</p>
+    </div>
+
+
+</body>
+
+</html>
