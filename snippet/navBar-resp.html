@@ -1,0 +1,75 @@
+<!-- Responsive nav menu -->
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Style the top navigation bar */
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        /* Style the topnav links */
+        .topnav a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        /* Change color on hover */
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* On screens that are 600px wide or less, make the menu links stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+            .topnav a {
+                float: none;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <h2>Responsive navigation menu</h2>
+    <p>Resize the browser window to see the effect: When the screen is less than 600px, the navigation menu will be
+        displayed vertically instead of horizontally.</p>
+
+    <div class="topnav">
+        <a href="#">Link &#8986;</a>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+
+    </div>
+
+    <iframe src="https://duckduckgo.com/search.html?width=250&site=matityap.blogspot.com&prefill=Search DuckDuckGo"
+        style="overflow:hidden;margin:0;padding:0;width:308px;height:40px;" frameborder="0"></iframe>
+    <img src="http://placekitten.com/200/300" alt="Kitten">
+    <img src="http://placekitten.com/500/500" alt="Kitten">
+    <img src="https://via.placeholder.com/150" alt="150">
+    <p><sup>tm &trade;</sup></p>
+
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d7977.490594352457!2d103.841517885793!3d1.328848141116828!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e3!4m5!1s0x31da11073a3d54f1%3A0x82cbf24bc656cbc6!2sSingapore%20679518!3m2!1d1.369808!2d103.777141!4m5!1s0x31da1763e9258347%3A0x9f7dcd0b3ef1f9f8!2sToa%20Payoh%20ActiveSG%20Sports%20Hall%2C%20297%20Lor%206%20Toa%20Payoh%2C%20Singapore%20319389!3m2!1d1.3308700999999998!2d103.85247199999999!5e0!3m2!1sen!2ssg!4v1622459976457!5m2!1sen!2ssg"
+        width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+</body>
+
+</html>
