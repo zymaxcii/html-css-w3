@@ -197,7 +197,13 @@ text-align: center
 major navigation: <nav></nav>
 display property: 20: inline, block, inline-block, none
 for testing: href= "#"
+```
 
+
+## html symbols
+```
+<<: &#8810;
+scissors: &#9986
 x: &times
 hamburger menu: &#x2630: it is a code, not image; aka menu icon
 smaller hamburger: &#8801
@@ -558,6 +564,12 @@ p {
     border: 2px solid powderblue;
     padding: 30px;
 }
+
+relative units: em, rem
+rem: root em; relative to font-size of root html element font-size property
+other properties: relative to its own
+em: relative to parent element font-size
+padding: 2em 1em; top/bottom and left/right
 ```
 
 
@@ -637,8 +649,84 @@ w3-xxlarge
 w3-serif
 w3-card-4
 w3-round-xlarge
+
+alerts: use w3-panel; typical:
+<div>
+  <h3>text</h3>
+  <p>text</p>
+</div>
+as a card: use w3-card
+w3-auto
+w3-blue-grey
+w3-deep-orage
+x to close alert:
+<span></span>
+onclick="this.parentElement.style.display='none'"
+class="w3-button w3-display-topright/right &times;
+rounded alerts: use w3-round-classes
+w3-round/-large/xxlarge
 ```
 
+
+## LIST
+```
+basic: w3-ul
+bordered: w3-border
+list header: <li> <h2>text</h2> </li>
+list as a card: w3-card-4 style="width:50%"
+avatar list
+```
+
+
+## NOTES QUOTES
+```
+notes: use w3-panel
+quotes: use w3-panel w3-leftbar w3-light-grey
+blockquote: extra left/right margins
+<blockquote></blckquote>
+```
+
+
+
+## TABLES
+```
+container: w3-table
+striped table: w3-striped
+border: w3-border
+lines: w3-bordered
+centered content: w3-centered
+center 1 column: use w3-center
+right align 1 column: w3-right-align
+hoverable table: w3-hoverable
+hover colour: w3-hover-color to <tr> element; hover-text-green
+combine all properties: w3-table-all
+bordered table: add bottom border
+table as a card: w3-card-4
+tiny table: w3-tiny
+small, large table: w3-small, w3-large
+
+<table class="w3-table w3-striped">
+  <tr>
+    <th>text</th> ...
+  </tr>
+  <tr>
+    <td>text</td> ...
+  </tr>
+</table>
+
+flipping stripes:
+add <thead> element around table header row
+<thead>
+  <tr class="w3-light-grey">
+    <th>text</th>
+  </tr>
+</thead>
+
+responsive table:
+<div class="w3-responsive">
+  <table class="w3-table-all"> ... </table>
+</div>
+```
 
 
 ## card
