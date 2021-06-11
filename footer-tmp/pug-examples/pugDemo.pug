@@ -1,0 +1,31 @@
+-
+  const sitePointEmployees = [
+    {
+      'firstName': 'James',
+      'lastName': 'Hibbard',
+      'twitter': 'https://twitter.com/jchibbard',
+      'position': 'JavaScript Editor',
+      'imgSrc': 'https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2019/02/1550836753jim1-150x150.jpg'
+    },
+    {
+      'firstName': 'Nilson',
+      'lastName': 'Jacques',
+      'twitter': 'https://twitter.com/nilsonjacques',
+      'position': 'JavaScript Editor',
+      'imgSrc': 'https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2015/11/1447635158nilsonjacques-96x96.jpg'
+    }
+  ]
+  
+h1 SitePoint JavaScript
+
+ul.team
+  each employee in sitePointEmployees
+    li
+      figure
+        img(src=employee.imgSrc alt=`${employee.firstName} ${employee.lastName}`)
+        figcaption
+          h3 #{employee.firstName} #{employee.lastName}
+          p= employee.position
+          a(href=employee.twitter target='_blank')
+            i.fa.fa-twitter
+
