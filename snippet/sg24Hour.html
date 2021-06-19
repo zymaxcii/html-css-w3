@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>SG Weather</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+<body>
+    <div class="w3-container">
+        <h2>24 HOUR FORECAST</h2>
+        <p>Singapore Weather</p>
+    </div>
+
+    <div class="w3-bar w3-teal w3-hover-green">
+        <button class="w3-bar-item w3-button" onclick="opencity('Morning')">Morning</button>
+        <button class="w3-bar-item w3-button" onclick="opencity('Afternoon')">Afternoon</button>
+        <button class="w3-bar-item w3-button" onclick="opencity('Night')">Night</button>
+        <button class="w3-bar-item w3-button" onclick="opencity('NextMorning')">Next Morning</button>
+    </div>
+
+    <div class="w3-panel">
+        <img src="./singapore.jpg" alt="Singapore map">
+    </div>
+
+    <div id="Morning" class="w3-container city">
+        <h2>Morning</h2>
+        <p>Partly cloudy for the rest of today. For tomorrow, thundery showers mainly over northern, eastern and
+            western Singapore in the late morning and early afternoon.
+        </p>
+    </div>
+
+    <div id="Afternoon" class="w3-container city" style="display:none">
+        <h2>Afternoon</h2>
+        <p>Late morning and early afternoon thundery showers.</p>
+    </div>
+
+    <div id="Night" class="w3-container city" style="display:none">
+        <h2>Night</h2>
+        <p>Expect scattered showers and thunderstorms to pop up in the mid-
+            day hours over the mountains. Not everyone will get wet, but the
+            coverage of showers will be greatest in the western and central
+            counties. The southeastern piedmont will have the lowest chance
+            of a shower today.
+        </p>
+    </div>
+
+    <div id="NextMorning" class="w3-container city" style="display:none">
+        <h2>Next Morning</h2>
+        <p>Tuesday will hold more numerous showers and thunderstorms with
+            most of those occurring in the afternoon and evening. The
+            afternoon highs will lower a couple of degrees each of the next
+            few days, while the humidity will stay high. Highs on Tuesday will
+            range from the upper 70s in the highest elevations of the
+            Alleghenies to just below 90 degrees
+        </p>
+    </div>
+
+    <script>
+        function opencity(cityName) {
+            var i;
+            var x = document.getElementsByClassName("city");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+                console.log(i, x[i])
+            }
+            document.getElementById(cityName).style.display = "block";
+            console.log(cityName)
+        }
+    </script>
+</body>
+
+</html>
