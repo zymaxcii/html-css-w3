@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Galileo Galilei, heliocentrism, geocentrism">
+    <meta name="description"
+        content="This document approaches briefly the works of Galileo Galilei about the Heliocentrism...">
+    <meta name="Author" content="Mark Rottenberg">
+    <link rel="index" href="../index.html">
+    <link rel="alternate" media="print" href="printer-version.html">
+    <title>HTML Quick</title>
+
+    <!-- 2 different ways to use link element: -->
+    <link rel="index" href="index.html" />
+    <link rel="prev" href="doc1.html" />
+    <link rel="next" href="doc3.html" />
+    <link rel="license" href="copyright.html" />
+    <link rel="alternate" media="print" href="doc2-printer.html" />
+    <link rel="alternate" lang="es" href="es/doc2.html" />
+    <link type="text/css" href="basic.css" media="screen" />
+
+    <!-- how to use this? -->
+    <link rel="author" href="mailto:matit.yap@gmail.com">
+
+    <style>
+        body {
+            width: 50%;
+        }
+
+        table {
+            width: 100%;
+            border-color: black;
+        }
+    </style>
+    <script>
+        result = 0;
+        function increment(amount) {
+            result += amount;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>HTML QUICK</h1>
+    <h2>HTML Tags and Attributes</h2>
+    <b>Important text</b><br>
+    <b style="color: red" onclick="changeColor(this.parentNode)">Bold text</b><br>
+    <p>Is this a <em>rainy</em> day? <input type="button" value="Yes"></p>
+    <button id="button-ok-1" acceskey="O" disabled>Ok</button><br>
+    <em onmouseover="changeColor(this.parentNode)" onmouseout="changeColor(this.parentNode)">HTML tags and
+        attributes</em>
+    <p><b>To continue with the process</b>, don't forget to renew you license!</p>
+    <p>You can also access the <a href="htmlQuick.html" target="_blank">HTML tutorials</a> for free.</p>
+    <p>Nationaly: <img src="canada-flag-icon.gif" alt="Canada"></p>
+    <p>Today I woke up decided to learn HTML on my own.</p>
+    <p>Today I woke up decided to learn <abbr>HTML</abbr> on my own.</p>
+    <p>Today I woke up decided to learn <abbr title="Hyper Text Markup Language">HTML</abbr> on my own.</p>
+    <p lang="en-US">Today I woke up decided to learn <abbr title="Hyper Text Markup Language">HTML</abbr> on my own.</p>
+
+    <section id="concept">
+        <h2>Concept</h2>
+        ... content, examples, etc. ...
+    </section>
+
+    <!-- for branching: -->
+    <main>
+        <section id="introduction2">
+            <h1>I made up my mind</h1>
+            <p>Today I woke up decided to learn <abbr title="Hyper Text Markup Language">HTML</abbr> on my own. So, I
+                opened <a href="http://www.htmlquick.com/">HTMLQuick.com</a> in my browser and got myself started.</p>
+        </section>
+        <section id="overcoming-obstacles2">
+            <h1>Getting the hang of it</h1>
+            <p>The process of learning this language was complicated, specially because I'm not a computer person.
+                Nevertheless, I tried very hard until things started to work out smoothly.</p>
+        </section>
+    </main>
+
+    <h2>Document Structure</h2>
+    <p>See head tag</p>
+    <p>Also see body tag</p>
+    <h2>Content grouping and structure</h2>
+    <h3>Paragraph:</h3>
+    <p>There's a shadow hanging over me...</p>
+    <h3>Lists</h3>
+    <h4>Ordered and unordered lists:</h4>
+    <p>Resources:</p>
+    <ul>
+        <li>Old magazines</li>
+        <li>White paper</li>
+        <li>Scissors</li>
+        <li>Glue</li>
+        <li>Pencil</li>
+    </ul>
+    <p>Procedure:</p>
+    <ol>
+        <li>Cut figures from the magazines that you think identify your image of the world.</li>
+        <li>Paste them in the paper with glue, leaving space at the bottom to write your thoughts.</li>
+        <li>Write down a description about the images and how they represent your image of the world.</li>
+    </ol>
+    <h4>Description list (dl,dt,dd):</h4>
+    <dl>
+        <dt>Mural</dt>
+        <dd>A large painting on a wall.</dd>
+        <dt>Medium</dt>
+        <dd>A material used by artists that often implies the technique for using it.</dd>
+        <dt>Miniature</dt>
+        <dd>A small painting executed with great detail.</dd>
+        <dd>A small portrait, picture or decorative letter on an illuminated manuscript.</dd>
+        <dt>Myth</dt>
+        <dt>Legend</dt>
+        <dd>A traditional story explaining aspects of the natural world or cultural and social ideas.</dd>
+        <h4>Lists nesting:</h4>
+        <ol>
+            <li>Collect the following items:
+                <ul>
+                    <li>Key</li>
+                    <li>Hammer</li>
+                    <li>Scissors</li>
+                </ul>
+            </li>
+            <li>Proceed to the next room.</li>
+        </ol>
+        <hr>
+        <dl>
+            <dt>Resources</dt>
+            <dd>
+                <ul>
+                    <li>Old magazines</li>
+                    <li>White paper</li>
+                    <li>Scissors</li>
+                    <li>Glue</li>
+                    <li>Pencil</li>
+                </ul>
+            </dd>
+            <dt>Procedure</dt>
+            <dd>
+                <ol>
+                    <li>Cut figures from the magazines that you think identify your image of the world.</li>
+                    <li>Paste them in the paper with glue, leaving space at the bottom to write your thoughts.</li>
+                    <li>Write down a description about the images and how they represent your image of the world.</li>
+                </ol>
+            </dd>
+        </dl>
+    </dl>
+    <h3>Sectioning content (section and h1-h6 tags):</h3>
+    <section>
+        <p>Samuel Langhorne Clemens, later known as Mark Twain, was born in Florida, Missouri, on November 30, 1835.
+            When he was four, Twain's family moved to Hannibal, Missouri, a port town on the Mississippi River that
+            inspired the fictional town of St. Petersburg in The Adventures of Tom Sawyer.</p>
+    </section>
+    <section>
+        <p>Throughout 1868, Twain and Olivia Langdon corresponded. Though she rejected his first marriage proposal, two
+            months later, they were engaged. In February 1870, Twain and Langdon were married in Elmira, New York, where
+            he courted her and managed to overcome her father's initial reluctance.</p>
+    </section>
+    <hr>
+    <section>
+        <h1>Early life</h1>
+        <p>Samuel Langhorne Clemens, later known as Mark Twain, was born in Florida, Missouri, on November 30, 1835.
+            When he was four, Twain's family moved to Hannibal, Missouri, a port town on the Mississippi River that
+            inspired the fictional town of St. Petersburg in The Adventures of Tom Sawyer.</p>
+    </section>
+    <section>
+        <h1>Marriage and children</h1>
+        <p>Throughout 1868, Twain and Olivia Langdon corresponded. Though she rejected his first marriage proposal, two
+            months later, they were engaged. In February 1870, Twain and Langdon were married in Elmira, New York, where
+            he courted her and managed to overcome her father's initial reluctance.</p>
+    </section>
+    <hr>
+    <section>
+        <h1>Biography of Mark Twain</h1>
+        <section>
+            <h2>Early life</h2>
+            <p>Samuel Langhorne Clemens, later known as Mark Twain, was born in Florida, Missouri, on November 30, 1835.
+                When he was four, Twain's family moved to Hannibal, Missouri, a port town on the Mississippi River that
+                inspired the fictional town of St. Petersburg in The Adventures of Tom Sawyer.</p>
+        </section>
+        <section>
+            <h2>Marriage and children</h2>
+            <p>Throughout 1868, Twain and Olivia Langdon corresponded. Though she rejected his first marriage proposal,
+                two months later, they were engaged. In February 1870, Twain and Langdon were married in Elmira, New
+                York, where he courted her and managed to overcome her father's initial reluctance.</p>
+        </section>
+    </section>
+    <hr>
+    <h3>main, header and footer elements:</h3>
+    <section>
+        <header>
+            <h1>Return to France</h1>
+            <p>On 1 March 1815, Napoleon reached the coasts of France on board the brig Inconstant with some 1,000 men,
+                where he was warmly received. Firing no shot in his defence, his troop numbers swelled until they became
+                an army.</p>
+        </header>
+        <main>
+            <p>...An old anecdote illustrates Napoleon's charisma. When royalist troops deployed to stop the march of
+                Napoleon's force at Grenoble, Napoleon stepped out in front of them, ripped open his coat and said "If
+                any of you will shoot his Emperor, here I am." The men that were supposed to stop his advance,
+                immediately joined his cause...</p>
+        </main>
+        <footer>
+            <address>John Doe<br>
+                jhondoe@whocaresserver.com
+            </address>
+        </footer>
+    </section>
+    <hr>
+    <h3>Parctice:</h3>
+    <p>Today I woke up decided to learn <abbr title="Hyper Text Markup Language">HTML</abbr> on my own.</p>
+    <p>The process of learning this language was complicated, specially because I'm not a computer person.
+        Nevertheless, I tried very hard until things started to work out smoothly.</p>
+    <hr>
+    <h3>create a very basic table of contents:</h3>
+    <ol>
+
+    </ol>
+    <p>Today I woke up decided to learn <abbr title="Hyper Text Markup Language">HTML</abbr> on my own.</p>
+    <p>The process of learning this language was complicated, specially because I'm not a computer person. Nevertheless,
+        I tried very hard until things started to work out smoothly.</p>
+
+    <hr>
+    <h3>Add items to the list:</h3>
+    <ol>
+        <li>I made up my mind</li>
+        <li>Getting the hang of it</li>
+    </ol>
+    <p>Today I woke up decided to learn <abbr title="Hyper Text Markup Language">HTML</abbr> on my own.</p>
+    <p>The process of learning this language was complicated, specially because I'm not a computer person. Nevertheless,
+        I tried very hard until things started to work out smoothly.</p>
+    <hr>
+
+    <h3>header and main sections:</h3>
+    <header>
+        <ol>
+            <li>I made up my mind</li>
+            <li>Getting the hang of it</li>
+        </ol>
+    </header>
+    <main>
+        <p>Today I woke up decided to learn <abbr title="Hyper Text Markup Language">HTML</abbr> on my own.</p>
+        <p>The process of learning this language was complicated, specially because I'm not a computer person.
+            Nevertheless, I tried very hard until things started to work out smoothly.</p>
+    </main>
+
+    <hr>
+    <h3>Divide main into 2 sections:</h3>
+    <header>
+        <ol>
+            <li>I made up my mind</li>
+            <li>Getting the hang of it</li>
+        </ol>
+    </header>
+    <main>
+        <section>
+            <p>Today I woke up decided to learn <abbr title="Hyper Text Markup Language">HTML</abbr> on my own.</p>
+        </section>
+        <section>
+            <p>The process of learning this language was complicated, specially because I'm not a computer person.
+                Nevertheless, I tried very hard until things started to work out smoothly.</p>
+        </section>
+    </main>
+
+    <hr>
+    <h3>Add heading to sections:</h3>
+    <header>
+        <h1>Table of contents</h1>
+        <ol>
+            <li>I made up my mind</li>
+            <li>Getting the hang of it</li>
+        </ol>
+    </header>
+    <main>
+        <section>
+            <h1>I made up my mind</h1>
+            <p>Today I woke up decided to learn <abbr title="Hyper Text Markup Language">HTML</abbr> on my own.</p>
+        </section>
+        <section>
+            <h1>Getting the hang of it</h1>
+            <p>The process of learning this language was complicated, specially because I'm not a computer person.
+                Nevertheless, I tried very hard until things started to work out smoothly.</p>
+        </section>
+    </main>
+
+    <hr>
+    <h2>LINKS</h2>
+    <h3>Links in HTML: the a element</h3>
+    <a href="../reference/uri-url.html">Definition of URI and URL</a>
+
+    <hr>
+    <h3>Links that include an image:</h3>
+    <a href="http://www.w3.org/"> <img src="w3c.jpg">The World Wide Web Consortium</a>
+
+    <hr>
+    <h3>Linking to fragments:</h3>
+    <a href="#concept">Back to section "Concept"</a>
+
+    <hr>
+    <h3>Email links:</h3>
+    <a href="mailto:webmaster@htmlquick.com">e-mail me!</a>
+    <br>
+    <a
+        href="mailto:webmaster@htmlquick.com?cc=archive@htmlquick.com&subject=From_the_web...&body=Fill_your_message_here...">e-mail
+        me!</a>
+    <br>
+    <a
+        href="mailto:webmaster@htmlquick.com?cc=archive@htmlquick.com&subject=From%20the%20web...&body=Fill%20your%20message%20here...">e-mail
+        me!</a>
+
+    <hr>
+    <h3>Link element can be used in 2 different ways:</h3>
+    <p>See head tag</p>
+
+    <hr>
+    <h3>Links:</h3>
+    <header>
+        <h1>Table of contents</h1>
+        <ol>
+            <li><a>I made up my mind</a></li>
+            <li><a>Getting the hang of it</a></li>
+        </ol>
+    </header>
+    <main>
+        <section>
+            <h1>I made up my mind</h1>
+            <p>Today I woke up decided to learn <abbr title="Hyper Text Markup Language">HTML</abbr> on my own.</p>
+        </section>
+        <section>
+            <h1>Getting the hang of it</h1>
+            <p>The process of learning this language was complicated, specially because I'm not a computer person.
+                Nevertheless, I tried very hard until things started to work out smoothly.</p>
+        </section>
+    </main>
+
+    <hr>
+    <header>
+        <h1>Table of contents</h1>
+        <ol>
+            <li><a href="#introduction2">I made up my mind</a></li>
+            <li><a href="#overcoming-obstacles2">Getting the hang of it</a></li>
+        </ol>
+    </header>
+    
+</body>
+
+</html>
