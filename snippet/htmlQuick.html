@@ -28,6 +28,7 @@
     <style>
         body {
             width: 50%;
+            text-align: left;
         }
 
         table {
@@ -342,7 +343,695 @@
             <li><a href="#overcoming-obstacles2">Getting the hang of it</a></li>
         </ol>
     </header>
-    
+
+    <hr>
+    <h2>Organizing a website</h2>
+    <ol>
+        <li>Directory structure</li>
+        <li>Structure for small websites</li>
+        <li>Dividing into categories</li>
+        <li>Dividing into sub-websites</li>
+        <li>Interlinking resources
+            <ul>
+                <li>Using full URLs</li>
+                <li>Using absolute-path references</li>
+                <li>Using relative-path references</li>
+            </ul>
+        </li>
+        <li>Practice</li>
+    </ol>
+
+    <hr>
+    <h2>Tables</h2>
+    <p>table, tr and td:</p>
+    <table class="default">
+        <tr>
+            <td>Cell 1</td>
+            <td>Cell 2</td>
+            <td>Cell 3</td>
+        </tr>
+        <tr>
+            <td>Cell 4</td>
+            <td>Cell 5</td>
+            <td>Cell 6</td>
+        </tr>
+    </table>
+
+    <hr>
+    <h3>Header cells - th element:</h3>
+    <table class="default">
+        <tr>
+            <th>Today</th>
+            <th>Tomorrow</th>
+            <th>Friday</th>
+        </tr>
+        <tr>
+            <td>Sunny</td>
+            <td>Mostly sunny</td>
+            <td>Partly cloudy</td>
+        </tr>
+        <tr>
+            <td>19°C</td>
+            <td>17°C</td>
+            <td>12°C</td>
+        </tr>
+        <tr>
+            <td>E 13 km/h</td>
+            <td>E 11 km/h</td>
+            <td>S 16 km/h</td>
+        </tr>
+    </table>
+
+    <hr>
+    <h3>Scope attribute: "col", "row", "colgroup" and "rowgroup":</h3>
+    <table class="default">
+        <tr>
+            <th scope="row">Day</th>
+            <!-- <th>Day</th> -->
+
+            <th>Today</th>
+            <th>Tomorrow</th>
+            <th>Friday</th>
+        </tr>
+        <tr>
+            <th>Condition</th>
+            <td>Sunny</td>
+            <td>Mostly sunny</td>
+            <td>Partly cloudy</td>
+        </tr>
+        <tr>
+            <th>Temperature</th>
+            <td>19°C</td>
+            <td>17°C</td>
+            <td>12°C</td>
+        </tr>
+        <tr>
+            <th>Wind</th>
+            <td>E 13 km/h</td>
+            <td>E 11 km/h</td>
+            <td>S 16 km/h</td>
+        </tr>
+    </table>
+
+    <hr>
+    <h3>Caption element:</h3>
+    <table class="default">
+        <caption>Fuel consumption of cars during the drive tests</caption>
+        <tr>
+            <th scope="col">Car</th>
+            <th>January</th>
+            <th>February</th>
+            <th>March</th>
+        </tr>
+        <tr>
+            <th>Chevrolet Camaro</th>
+            <td>1254 gal</td>
+            <td>1582 gal</td>
+            <td>685 gal</td>
+        </tr>
+        <tr>
+            <th>Lamborghini Aventator</th>
+            <td>1854 gal</td>
+            <td>1978 gal</td>
+            <td>1502 gal</td>
+        </tr>
+    </table>
+
+    <hr>
+    <h3>Cell spanning - colspan:horizontal</h3>
+    <table class="default">
+        <tr>
+            <th></th>
+            <th>Day 1</th>
+            <th>Day 2</th>
+            <th>Day 3</th>
+            <th>Day 4</th>
+        </tr>
+        <tr>
+            <th>Mike (injured)</th>
+
+            <!-- <td>0 km</td> -->
+            <td colspan="3">0 km</td>
+
+            <td>4 km</td>
+        </tr>
+        <tr>
+            <th>Susan</th>
+            <td>23 km</td>
+            <td>18 km</td>
+            <td>19 km</td>
+            <td>15 km</td>
+        </tr>
+    </table>
+
+    <hr>
+    <h3>Cell spanning - rowspan:vertical</h3>
+    <table class="default">
+        <tr>
+            <th></th>
+            <th>Basic</th>
+            <th>Full</th>
+        </tr>
+        <tr>
+            <th>Setup</th>
+            <td rowspan="2">Free!</td>
+            <td>$49.99</td>
+        </tr>
+        <tr>
+            <th>First year</th>
+            <td>$19.99</td>
+        </tr>
+        <tr>
+            <th>Second year</th>
+            <td>$9.99</td>
+            <td>$29.99</td>
+        </tr>
+    </table>
+
+    <hr>
+    <h3>Grouping rows - thead, tmain, tfoot:</h3>
+    <table class="default">
+        <thead>
+            <tr>
+                <th></th>
+                <th colspan="2">Anthony</th>
+                <th colspan="2">Lione</th>
+            </tr>
+            <tr>
+                <th scope="col">Date</th>
+                <th>Income</th>
+                <th>Outcome</th>
+                <th>Income</th>
+                <th>Outcome</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>07/15</th>
+                <td>$200,00</td>
+                <td>$50,00</td>
+                <td>$0</td>
+                <td>$0</td>
+            </tr>
+            <tr>
+                <th>07/28</th>
+                <td>$0,00</td>
+                <td>$100,00</td>
+                <td>$100,00</td>
+                <td>$0,00</td>
+            </tr>
+            <tr>
+                <th>08/09</th>
+                <td>$0,00</td>
+                <td>$50,00</td>
+                <td>$0,00</td>
+                <td>$80,00</td>
+            </tr>
+            <tr>
+                <th>08/22</th>
+                <td>$40,00</td>
+                <td>$0,00</td>
+                <td>$0,00</td>
+                <td>$110,00</td>
+            </tr>
+            <tr>
+                <th>08/25</th>
+                <td>$0,00</td>
+                <td>$20,00</td>
+                <td>$0,00</td>
+                <td>$0,00</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Balance</th>
+                <td colspan="2">$20,00</td>
+                <td colspan="2">$10,00</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <hr>
+    <h3>Added some styles:</h3>
+    <table class="default">
+        <thead>
+            <tr>
+                <th></th>
+                <th colspan="2">Anthony</th>
+                <th colspan="2">Lione</th>
+            </tr>
+            <tr>
+                <th scope="col">Date</th>
+                <th>Income</th>
+                <th>Outcome</th>
+                <th>Income</th>
+                <th>Outcome</th>
+            </tr>
+        </thead>
+        <tbody style="background: rgba(128, 255, 0, 0.3); border: 1px solid rgba(100, 200, 0, 0.3);">
+            <tr>
+                <th>07/15</th>
+                <td>$200,00</td>
+                <td>$50,00</td>
+                <td>$0</td>
+                <td>$0</td>
+            </tr>
+            <tr>
+                <th>07/28</th>
+                <td>$0,00</td>
+                <td>$100,00</td>
+                <td>$100,00</td>
+                <td>$0,00</td>
+            </tr>
+        </tbody>
+        <tbody style="background: rgba(255, 128, 0, 0.3); border: 1px solid rgba(200, 100, 0, 0.3);">
+            <tr>
+                <th>08/09</th>
+                <td>$0,00</td>
+                <td>$50,00</td>
+                <td>$0,00</td>
+                <td>$80,00</td>
+            </tr>
+            <tr>
+                <th>08/22</th>
+                <td>$40,00</td>
+                <td>$0,00</td>
+                <td>$0,00</td>
+                <td>$110,00</td>
+            </tr>
+            <tr>
+                <th>08/25</th>
+                <td>$0,00</td>
+                <td>$20,00</td>
+                <td>$0,00</td>
+                <td>$0,00</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Balance</th>
+                <td colspan="2">$20,00</td>
+                <td colspan="2">$10,00</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <hr>
+    <h3>Grouping columns - colgroup:</h3>
+    <table class="default">
+        <colgroup>
+            <colgroup span="2" style="background: rgba(128, 255, 0, 0.3); border: 1px solid rgba(100, 200, 0, 0.3);">
+                <colgroup span="2"
+                    style="background: rgba(255, 128, 0, 0.3); border: 1px solid rgba(200, 100, 0, 0.3);">
+                <tr>
+                    <th></th>
+                    <th colspan="2">Mike</th>
+                    <th colspan="2">Tara</th>
+                </tr>
+            <tr>
+                <th></th>
+                <th>First test</th>
+                <th>Second test</th>
+                <th>First test</th>
+                <th>Second test</th>
+            </tr>
+            <!-- optional -->
+        </colgroup>
+        <tr>
+            <th>Day 1</th>
+            <td>25 km</td>
+            <td>38 km</td>
+            <td>28 km</td>
+            <td>37 km</td>
+        </tr>
+        <tr>
+            <th>Day 2</th>
+            <td>22 km</td>
+            <td>35 km</td>
+            <td>30 km</td>
+            <td>35 km</td>
+        </tr>
+    </table>
+
+    <hr>
+    <h3>Practice:</h3>
+    <h1>What I've learned so far</h1>
+    <p>The following table summarizes all <abbr title="Hyper Text Markup Language">HTML</abbr> elements I've learned so
+        far.
+        I know this list is short, but I expect it to grow considerably in the following weeks.
+    </p>
+
+    <br><br>
+    <h1>What I've learned so far</h1>
+    <p>The following table summarizes all <abbr title="Hyper Text Markup Language">HTML</abbr> elements I've learned so
+        far.
+        I know this list is short, but I expect it to grow considerably in the following weeks.</p>
+    <table class="default">
+        <caption>HTML elements I've learned so far</caption>
+        <tr>
+
+        </tr>
+    </table>
+
+    <br><br>
+    <h1>What I've learned so far</h1>
+    <p>The following table summarizes all <abbr title="Hyper Text Markup Language">HTML</abbr> elements I've learned so
+        far.
+        I know this list is short, but I expect it to grow considerably in the following weeks.</p>
+    <table class="default">
+        <caption>HTML elements I've learned so far</caption>
+        <tr>
+            <th>Element</th>
+            <th>Description</th>
+        </tr>
+    </table>
+
+    <br><br>
+    <h3>Add more rows:</h3>
+    <h1>What I've learned so far</h1>
+    <p>The following table summarizes all <abbr title="Hyper Text Markup Language">HTML</abbr> elements I've learned so
+        far.
+        I know this list is short, but I expect it to grow considerably in the following weeks.</p>
+    <table class="default">
+        <caption>HTML elements I've learned so far</caption>
+        <tr>
+            <th>Element</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>html</td>
+            <td>Is the container for all elements in a document</td>
+        </tr>
+        <tr>
+            <td>head</td>
+            <td>Contains the title and relational information about the document</td>
+        </tr>
+        <tr>
+            <td>title</td>
+            <td>Provides a title for the document</td>
+        </tr>
+        <tr>
+            <td>body</td>
+            <td>Is the section where the document's contents can be found</td>
+        </tr>
+        <tr>
+            <td>h1-h6</td>
+            <td>Represents a heading</td>
+        </tr>
+        <tr>
+            <td>p</td>
+            <td>Represents a paragraph</td>
+        </tr>
+    </table>
+
+    <br><br>
+    <h3>Add horizontal groups:</h3>
+    <h1>What I've learned so far</h1>
+    <p>The following table summarizes all <abbr title="Hyper Text Markup Language">HTML</abbr> elements I've learned so
+        far.
+        I know this list is short, but I expect it to grow considerably in the following weeks.</p>
+    <table class="default">
+        <caption>HTML elements I've learned so far</caption>
+        <thead>
+            <tr>
+                <th>Element</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>html</td>
+                <td>Is the container for all elements in a document</td>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr>
+                <td>head</td>
+                <td>Contains the title and relational information about the document</td>
+            </tr>
+            <tr>
+                <td>title</td>
+                <td>Provides a title for the document</td>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr>
+                <td>body</td>
+                <td>Is the section where the document's contents can be found</td>
+            </tr>
+            <tr>
+                <td>h1-h6</td>
+                <td>Represents a heading</td>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr>
+                <td>p</td>
+                <td>Represents a paragraph</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br><br>
+    <h3>Add header rows:</h3>
+    <h1>What I've learned so far</h1>
+    <p>The following table summarizes all <abbr title="Hyper Text Markup Language">HTML</abbr> elements I've learned so
+        far.
+        I know this list is short, but I expect it to grow considerably in the following weeks.</p>
+    <table class="default">
+        <caption>HTML elements I've learned so far</caption>
+        <thead>
+            <tr>
+                <th>Element</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th colspan="2" scope="rowgroup">The root element</th>
+            </tr>
+            <tr>
+                <td>html</td>
+                <td>Is the container for all elements in a document</td>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr>
+                <th colspan="2" scope="rowgroup">Document metadata</th>
+            </tr>
+            <tr>
+                <td>head</td>
+                <td>Contains the title and relational information about the document</td>
+            </tr>
+            <tr>
+                <td>title</td>
+                <td>Provides a title for the document</td>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr>
+                <th colspan="2" scope="rowgroup">Sections</th>
+            </tr>
+            <tr>
+                <td>body</td>
+                <td>Is the section where the document's contents can be found</td>
+            </tr>
+            <tr>
+                <td>h1-h6</td>
+                <td>Represents a heading</td>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr>
+                <th colspan="2" scope="rowgroup">Grouping content</th>
+            </tr>
+            <tr>
+                <td>p</td>
+                <td>Represents a paragraph</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr>
+    <h2>FORMS:</h2>
+    <pre>
+    <form>
+        [Set of controls]
+    </form>
+    <p>action, method, target</p>
+    </pre>
+
+    <hr>
+    <form action="../form-result.php" target="_blank">
+        <input type="submit" value="Submit the form">
+    </form>
+
+    <hr>
+    <h3>Text controls</h3>
+    <h4>Single-line text input</h4>
+    <form action="../form-result.php" target="_blank">
+        <p>
+            Enter your full name: <input type="text" name="fullname">
+            <input type="submit" value="Send data">
+        </p>
+    </form>
+
+    <hr>
+    <h4>Multi-line text input</h4>
+    <form action="../form-result.php" target="_blank">
+        <p>Enter your full name: <input type="text" name="fullname"></p>
+        <p>
+            Leave a message:<br>
+            <textarea name="message"></textarea>
+        </p>
+        <input type="submit" value="Send data">
+    </form>
+
+    <hr>
+    <h3>Option controls - Checkboxes</h3>
+    <form action="../../form-result.php" target="_blank">
+        <p>
+            Select your interests:<br>
+            <input type="checkbox" name="movies"> Movies<br>
+            <input type="checkbox" name="sports"> Sports<br>
+            <input type="checkbox" name="videogames"> Videogames
+        </p>
+        <p><input type="submit" value="Send data"></p>
+    </form>
+
+    <hr>
+    <h3>Radio buttons</h3>
+    <form action="../../form-result.php" target="_blank">
+        <p>
+            Income:<br>
+            <input type="radio" name="income" value="lowerthan1000"> Lower than $1,000.00<br>
+            <input type="radio" name="income" value="from1000to5000"> From $1,000.00 to $5,000.00<br>
+            <input type="radio" name="income" value="higherthan5000"> Higher than $5,000.00
+        </p>
+        <p><input type="submit" value="Send data"></p>
+    </form>
+
+    <hr>
+    <h3>list of options - select, option:</h3>
+    <form action="../../form-result.php" target="_blank">
+        <p>
+            Gender:
+            <select name="gender">
+                <option>Male</option>
+                <option>Female</option>
+            </select>
+        </p>
+        <p><input type="submit" value="Send data"></p>
+    </form>
+
+    <hr>
+    <h3>control and shift select:</h3>
+    <form action="../../form-result.php" target="_blank">
+        <p>
+            Select categories:<br>
+            <select multiple name="categories[]">
+                <option value="art">Art and entertainment</option>
+                <option value="tv">Television and movies</option>
+                <option value="kids">Kids and teenagers</option>
+                <option value="diy">Do it yourself</option>
+            </select>
+        </p>
+        <p><input type="submit" value="Send data"></p>
+    </form>
+
+    <hr>
+    <h3>Submit buttons</h3>
+    <form action="../../form-result.php" target="_blank">
+        <p>
+            Edit your description:
+            <input type="text" name="desc">
+            <input type="submit" value="Save edits">
+        </p>
+    </form>
+
+    <hr>
+    <h3>Reset buttons</h3>
+    <form action="../../form-result.php" target="_blank">
+        <p>Send message: <input type="text" name="message" value="I'm ready!"></p>
+        <p>
+            <input type="radio" name="when" value="today" checked> Today<br>
+            <input type="radio" name="when" value="tomorrow"> Tomorrow
+        </p>
+        <p><input type="checkbox" name="copy" checked> Send me a copy</p>
+        <p>
+            <input type="reset" value="Reset the form">
+            <input type="submit" value="Send message">
+        </p>
+    </form>
+
+    <hr>
+    <h3>Labeling controls</h3>
+    <form action="../../form-result.php" target="_blank">
+        <p><label>Name: <input type="text" name="fullname"></label></p>
+        <p>
+            Gender:
+            <label><input type="radio" name="gender" value="male"> Male</label>
+            <label><input type="radio" name="gender" value="female"> Female</label>
+        </p>
+        <p><label><input type="checkbox" name="newsletter"> I'd like to receive the newsletter</label></p>
+        <p><input type="submit" value="Send data"></p>
+    </form>
+
+    <hr>
+    <h3>Grouping controls -fieldset and legend element</h3>
+    <form action="../../form-result.php" target="_blank">
+        <fieldset>
+            <legend>Personal information</legend>
+            <p><label>Name: <input type="text" name="fullname"></label></p>
+            <p><label>Address: <input type="text" name="address"></label></p>
+        </fieldset>
+        <fieldset>
+            <legend>Preferences</legend>
+            <p>
+                <label><input type="checkbox" name="arts"> Arts</label><br>
+                <label><input type="checkbox" name="television"> Television</label><br>
+                <label><input type="checkbox" name="videogames"> Videogames</label><br>
+                <label><input type="checkbox" name="sports"> Sports</label><br>
+            </p>
+        </fieldset>
+        <input type="submit" value="Send data">
+    </form>
+
+    <hr>
+    <h3>Practice</h3>
+    <h1>Have something to say?</h1>
+    <p>Through this form you can send me a message to help me get rid of errors in the pages, to improve my blog, or to
+        just to say hello. Anything you have to say is very welcome, so don't hesitate and drop a few words. I'll be
+        happy to write back to you!</p>
+    <form action="../../form-result.php" target="_blank">
+        <fieldset>
+            <legend>Message</legend>
+            <p><label>Your name: <input type="text" name="fullname"></label></p>
+            <p><label>Your e-mail address: <input type="text" name="email"></label></p>
+            <p>
+                <label>
+                    Your message:<br>
+                    <textarea name="message"></textarea>
+                </label>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>New topics</legend>
+            <p>
+                What topics would you like me to talk about more in my site?<br>
+                <label><input type="checkbox" name="html"> HTML</label>
+                <label><input type="checkbox" name="graphics"> Graphics</label>
+                <label><input type="checkbox" name="videogames"> Videogames</label>
+                <label><input type="checkbox" name="art"> Art</label>
+                <label><input type="checkbox" name="music"> Music</label>
+            </p>
+        </fieldset>
+        <p>
+            <input type="submit" value="Send message">
+            <input type="reset" value="Start over">
+        </p>
+    </form>
+
 </body>
 
 </html>
